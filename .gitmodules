@@ -1,0 +1,12 @@
+[submodule "core"]
+	path = core
+	url = https://github.com/kcaitech/vextra-core.git
+[submodule "editor"]
+	path = editor
+	url = https://github.com/kcaitech/vextra-editor.git
+[submodule "mcp"]
+	path = mcp
+	url = https://github.com/kcaitech/vextra-mcp.git
+[submodule "agent"]
+	path = agent
+	url = https://github.com/kcaitech/vextra-agent.git
