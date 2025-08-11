@@ -1,0 +1,97 @@
+# version: '3.8'
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      # MYSQL_DATABASE: kcauth
+      MYSQL_MULTIPLE_DATABASES: kcauth,kcserver
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./create-multiple-dbs.sh:/docker-entrypoint-initdb.d/create-multiple-dbs.sh
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-ppassword"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    networks:
+      kcserver:
+  redis:
+    image: redis:8.0.0
+    container_name: redis
+    restart: always
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    command: redis-server --appendonly yes
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    networks:
+      kcserver:
+  minio:
+    image: quay.io/minio/minio
+    entrypoint: sh
+    command: -c "minio server /data --console-address ':9001' & sleep 5 && /usr/bin/minio-init.sh && tail -f /dev/null"
+    container_name: minio
+    # networks:
+    #   kcserver:
+    restart: always
+    environment:
+      TZ: Asia/Shanghai
+      MINIO_ROOT_USER: root
+      MINIO_ROOT_PASSWORD: your-password
+      MINIO_REGION: zhuhai-1
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    volumes:
+      - minio_data:/data
+      - ./minio-init.sh:/usr/bin/minio-init.sh
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    networks:
+      kcserver:
+
+  mongo:
+    image: mongo:8.0
+    container_name: mongo
+    # networks:
+    #   kcserver:
+    restart: always
+    ports:
+      - "27017:27017" # 测试用
+    environment:
+      TZ: Asia/Shanghai
+      MONGO_INITDB_DATABASE: kcserver
+      MONGO_INITDB_COLLECTION: document
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: your-password
+    volumes:
+      - mongo_db:/data/db
+      - mongo_configdb:/data/configdb
+    networks:
+      kcserver:
+
+volumes:
+  mysql_data:
+  redis_data:
+  minio_data:
+  mongo_db:
+  mongo_configdb:
+
+networks:
+  kcserver:
+    external: true

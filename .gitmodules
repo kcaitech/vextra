@@ -10,3 +10,12 @@
 [submodule "agent"]
 	path = agent
 	url = https://github.com/kcaitech/vextra-agent.git
+[submodule "main"]
+	path = main
+	url = https://github.com/kcaitech/vextra-main.git
+[submodule "version-server"]
+	path = version-server
+	url = https://github.com/kcaitech/vextra-version-server.git
+[submodule "coop"]
+	path = coop
+	url = https://github.com/kcaitech/vextra-coop.git
