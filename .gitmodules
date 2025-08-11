@@ -19,3 +19,6 @@
 [submodule "coop"]
 	path = coop
 	url = https://github.com/kcaitech/vextra-coop.git
+[submodule "server"]
+	path = server
+	url = https://github.com/kcaitech/vextra-server.git
