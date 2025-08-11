@@ -41,6 +41,6 @@ middleware:
 
 auth_server:
   api_addr: http://auth/api
-  login_url: http://localhost
+  login_url: http://localhost:81
   client_id: kcserver
   client_secret: yourSecurePassword123
