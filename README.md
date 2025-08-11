@@ -151,8 +151,8 @@ Thanks to all developers and users who have contributed to the Vextra project!
 
 ## 🌍 Multi-language
 
-- [English](./README-en.md) - English version
-- [中文](./README.md) - Chinese version
+- [English](./README.md) - English version
+- [中文](./README-zh.md) - Chinese version
 
 ---
 

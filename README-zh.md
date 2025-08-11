@@ -152,8 +152,8 @@ vextra/
 
 ## 🌍 多语言
 
-- [English](./README-en.md) - English version
-- [中文](./README.md) - 中文版本
+- [English](./README.md) - English version
+- [中文](./README-zh.md) - 中文版本
 
 ---
 
