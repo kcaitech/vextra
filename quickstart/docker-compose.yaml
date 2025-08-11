@@ -85,6 +85,28 @@ services:
     networks:
       kcserver:
 
+  auth:
+    image: @kcaitech/auth:latest
+    container_name: auth
+    restart: always
+    ports:
+      - "80:80"
+    networks:
+      kcserver:
+    volumes:
+      - ./auth-config.yaml:/app/config/config.yaml
+
+  vextra:
+    image: @kcaitech/vextra:latest
+    container_name: vextra
+    restart: always
+    ports:
+      - "80:80"
+    networks:
+      kcserver:
+    volumes:
+      - ./vextra-server-config.yaml:/app/config/config.yaml
+
 volumes:
   mysql_data:
   redis_data:

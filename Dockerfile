@@ -45,7 +45,7 @@ COPY health-check.sh /app/
 RUN chmod +x docker-entrypoint.sh
 RUN chmod +x health-check.sh
 
-COPY kcserver/version.json /app/
+COPY server/version.json /app/
 COPY --from=builder /app/kcserver /app/kcserver
 COPY --from=node-builder /main/dist /app/html
 COPY --from=node-builder /version-server/node_modules /app/node_modules

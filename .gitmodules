@@ -22,3 +22,6 @@
 [submodule "server"]
 	path = server
 	url = https://github.com/kcaitech/vextra-server.git
+[submodule "auth"]
+	path = auth
+	url = https://github.com/kcaitech/auth.git

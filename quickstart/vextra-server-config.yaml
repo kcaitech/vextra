@@ -1,0 +1,46 @@
+db:
+  user: root
+  password: password
+  host: mysql
+  port: 3306
+  database: kcserver
+  charset: utf8mb4
+
+mongo:
+  url: mongodb://root:jKKsinkjilKKLSW@mongodb:27017
+  db: kcserver
+
+redis:
+  addr: redis:6379
+  password: kcserver
+  db: 0
+
+storage_public_url:
+  document: http://localhost:9000
+  attatch: http://localhost:9000/attatch
+
+storage:
+  provider: minio
+  endpoint: "minio:9000"
+  region: "zhuhai-1"
+  accessKeyID: "T64JKDV276dJp10"
+  secretAccessKey: "1JzdCtZqgiys22q"
+  stsAccessKeyID: "user"
+  stsSecretAccessKey: "LRfETL5HGUGAGv9"
+  documentBucket: "document"
+  attatchBucket: "attatch"
+
+doc_update_server:
+  url: http://localhost:30000/generate
+  min_update_interval: 600
+  min_cmd_count: 1
+
+middleware:
+  cors: true
+  debug_log: true
+
+auth_server:
+  api_addr: http://auth/api
+  login_url: http://localhost
+  client_id: kcserver
+  client_secret: yourSecurePassword123
