@@ -150,6 +150,15 @@ vextra/
 - GitHub: [https://github.com/kcaitech/vextra](https://github.com/kcaitech/vextra)
 - 邮箱: support@kcaitech.com
 
+## 🏢 企业支持
+
+对于需要以下服务的企业客户：
+- 专业支持和咨询
+- 定制开发和集成
+- 培训和研讨会
+
+**联系方式**：[contact@kcaitech.com](mailto:contact@kcaitech.com)
+
 ## 🌍 多语言
 
 - [English](./README.md) - English version

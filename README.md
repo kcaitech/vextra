@@ -149,6 +149,15 @@ Thanks to all developers and users who have contributed to the Vextra project!
 - GitHub: [https://github.com/kcaitech/vextra](https://github.com/kcaitech/vextra)
 - Email: support@kcaitech.com
 
+## 🏢 Enterprise Support
+
+For enterprise customers requiring the following services:
+- Professional support and consulting
+- Custom development and integration
+- Training and workshops
+
+**Contact**: [contact@kcaitech.com](mailto:contact@kcaitech.com)
+
 ## 🌍 Multi-language
 
 - [English](./README.md) - English version
