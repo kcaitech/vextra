@@ -21,7 +21,7 @@ RUN go mod download && go mod tidy -v && go build -ldflags "-s -w" -o kcserver .
 FROM node:22-alpine AS node-builder
 WORKDIR /main
 COPY main .
-RUN npm i && npm run build:prd
+RUN npm i && npm run build:prod
 
 # build vextra version server
 WORKDIR /version-server
