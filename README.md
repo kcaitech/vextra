@@ -147,7 +147,6 @@ Thanks to all developers and users who have contributed to the Vextra project!
 
 - Official website: [https://kcaitech.com](https://kcaitech.com)
 - GitHub: [https://github.com/kcaitech/vextra](https://github.com/kcaitech/vextra)
-- Email: support@kcaitech.com
 
 ## 🏢 Enterprise Support
 

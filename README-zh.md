@@ -148,7 +148,6 @@ vextra/
 - 官方网站: [https://kcaitech.com](https://kcaitech.com)
 - 产品网站: [https://vextra.cn](https://vextra.cn)
 - GitHub: [https://github.com/kcaitech/vextra](https://github.com/kcaitech/vextra)
-- 邮箱: support@kcaitech.com
 
 ## 🏢 企业支持
 
