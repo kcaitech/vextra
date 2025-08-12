@@ -1,10 +1,10 @@
-# Vextra - Open Source Design Software
+# Vextra - Open Source Collaborative Design Software
 
 [![License: AGPL-3.0](https://img.shields.io/badge/License-AGPL%203.0-green.svg)](https://opensource.org/licenses/AGPL-3.0)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.8+-blue.svg)](https://www.typescriptlang.org/)
 [![Vue](https://img.shields.io/badge/Vue-3.2+-green.svg)](https://vuejs.org/)
 
-Vextra is a powerful open-source design software that supports Figma and Sketch file formats. It provides a complete online design toolchain, including editor, collaboration features, version management, and other core capabilities.
+Vextra is a powerful open-source collaborative design software that supports Figma and Sketch file formats. It provides a complete online design toolchain, including editor, collaboration features, and other core capabilities.
 
 ## ✨ Key Features
 

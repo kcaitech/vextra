@@ -1,10 +1,10 @@
-# Vextra - 开源设计软件
+# Vextra - 开源协作设计软件
 
 [![License: AGPL-3.0](https://img.shields.io/badge/License-AGPL%203.0-green.svg)](https://opensource.org/licenses/AGPL-3.0)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.8+-blue.svg)](https://www.typescriptlang.org/)
 [![Vue](https://img.shields.io/badge/Vue-3.2+-green.svg)](https://vuejs.org/)
 
-Vextra 是一个功能强大的开源设计软件，支持 Figma 和 Sketch 文件格式。它提供了完整的在线设计工具链，包括编辑器、协作功能、版本管理等核心特性。
+Vextra 是一个功能强大的开源协作设计软件，支持 Figma 和 Sketch 文件格式。它提供了完整的在线设计工具链，包括编辑器、协作功能等核心特性。
 
 ## ✨ 主要特性
 
