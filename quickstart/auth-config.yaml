@@ -3,12 +3,12 @@ db:
   password: password
   host: mysql
   port: 3306
-  database: kcserver
+  database: kcauth
   charset: utf8mb4
 
 redis:
   addr: redis:6379
-  password: kcserver
+  password:
   db: 0
 
 storage:

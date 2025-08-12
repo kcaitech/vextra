@@ -7,7 +7,6 @@ services:
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: password
-      # MYSQL_DATABASE: kcauth
       MYSQL_MULTIPLE_DATABASES: kcauth,kcserver
     ports:
       - "3306:3306"
@@ -22,6 +21,7 @@ services:
       retries: 5
     networks:
       kcserver:
+
   redis:
     image: redis:8.0.0
     container_name: redis
@@ -38,13 +38,12 @@ services:
       retries: 5
     networks:
       kcserver:
+
   minio:
     image: quay.io/minio/minio
     entrypoint: sh
     command: -c "minio server /data --console-address ':9001' & sleep 5 && /usr/bin/minio-init.sh && tail -f /dev/null"
     container_name: minio
-    # networks:
-    #   kcserver:
     restart: always
     environment:
       TZ: Asia/Shanghai
@@ -68,8 +67,6 @@ services:
   mongo:
     image: mongo:8.0
     container_name: mongo
-    # networks:
-    #   kcserver:
     restart: always
     ports:
       - "27017:27017" # 测试用
@@ -86,7 +83,7 @@ services:
       kcserver:
 
   auth:
-    image: @kcaitech/auth:latest
+    image: kcaitech/auth:latest
     container_name: auth
     restart: always
     ports:
@@ -97,7 +94,7 @@ services:
       - ./auth-config.yaml:/app/config/config.yaml
 
   vextra:
-    image: @kcaitech/vextra:latest
+    image: kcaitech/vextra:latest
     container_name: vextra
     restart: always
     ports:

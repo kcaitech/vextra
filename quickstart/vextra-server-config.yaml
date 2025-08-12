@@ -7,12 +7,12 @@ db:
   charset: utf8mb4
 
 mongo:
-  url: mongodb://root:jKKsinkjilKKLSW@mongodb:27017
+  url: mongodb://root:your-password@mongo:27017
   db: kcserver
 
 redis:
   addr: redis:6379
-  password: kcserver
+  password:
   db: 0
 
 storage_public_url:

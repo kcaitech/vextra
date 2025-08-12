@@ -1,5 +1,5 @@
 # build vextra server
-FROM golang:1.23-alpine3.20 AS builder
+FROM golang:1.23-alpine3.22 AS builder
 
 ENV GO111MODULE=on \
     CGO_ENABLED=0 \
@@ -17,7 +17,7 @@ COPY server .
 RUN go mod download && go mod tidy -v && go build -ldflags "-s -w" -o kcserver ./main.go
 
 # build vextra web
-FROM node:22-alpine AS node-builder
+FROM node:22-alpine3.22 AS node-builder
 WORKDIR /main
 COPY main .
 RUN npm i && npm run build:prod
@@ -29,7 +29,7 @@ RUN npm i && npm run build
 
 
 # package
-FROM golang:1.23-alpine3.20
+FROM node:22-alpine3.22
 WORKDIR /app
 
 ENV TZ=Asia/Shanghai
