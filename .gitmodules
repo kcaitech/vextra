@@ -25,3 +25,6 @@
 [submodule "auth"]
 	path = auth
 	url = https://github.com/kcaitech/auth.git
+[submodule "quickstart"]
+	path = quickstart
+	url = https://github.com/kcaitech/vextra-quickstart.git
